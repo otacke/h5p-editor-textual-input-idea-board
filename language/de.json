@@ -1,0 +1,13 @@
+{
+  "libraryStrings": {
+    "l10n.helpTextTitleMain": "Wichtige Hinweise",
+    "l10n.helpTextTitleExample": "Beispiel",
+    "l10n.helpTextIntroduction": "Du kannst Karten hinzufügen, indem du hier die gewünschten Texte eingibst. Karten müssen durch eine Leerzeile getrennt werden.",
+    "l10n.helpTextExample": "Himbeeren\n\nErdbeeren\n(lecker)\n\nHeidelbeeren",
+    "l10n.warningHeaderText": "Bestätige den Warnhinweis",
+    "l10n.warningDialogText": "Achtung! Wenn du die Aufgabe hier in Textform änderst und dann den Editor mit deinen Änderungen aktualisierst, werden alle vorhandenen Karten entfernt und nur Textkarten hinzugefügt. Vorherige Formatierungen gehen verloren.",
+    "l10n.ok": "OK",
+    "l10n.getFromEditor": "Aus Editor übernehmen",
+    "l10n.updateEditor": "Editor aktualisieren"
+  }
+}

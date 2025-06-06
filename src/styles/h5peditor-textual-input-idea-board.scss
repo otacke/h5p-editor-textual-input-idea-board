@@ -1,0 +1,108 @@
+.h5peditor-textual-input-idea-board {
+  /* Common colors */
+  --color-background: #fff;
+  --color-text: #4c4452;
+  --color-text-dark: var(--color-text);
+  --color-text-light: #fff;
+
+  /* Primary color with common gradients */
+  --color-primary: rgb(26, 115, 217);
+  --color-primary-90: rgb(26 115 217 / 90%);
+
+/* Icons */
+  --icon-fontawesome-angles-up: '\f102';
+  --icon-fontawesome-angles-down: '\f103';
+
+  textarea {
+    height: 15rem;
+  }
+
+  .h5peditor-textual-input-help-text {
+    background-color: #f9f9d8;
+    border: 1px solid #ffde78;
+    color: #434446;
+    padding: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: .5px;
+    line-height: 1rem;
+    margin-bottom: 1rem;
+    margin-top: .3rem;
+
+    .header {
+      margin-bottom: .5rem;
+      position: relative;
+
+      .title {
+        font-size: 1.3em;
+        font-weight: bold;
+
+        &::before {
+          content: "\e909";
+          font-family: "H5P", sans-serif;
+          font-size: 1.7em;
+          font-weight: normal;
+          margin-left: -0.3em;
+          position: relative;
+          top: 0.2em;
+        }
+      }
+    }
+
+    .body {
+      .example {
+        background-color: #d9fac3;
+        border: 1px solid #bbde98;
+        display: flex;
+        margin-top: 1rem;
+        width: 100%;
+
+        .example-title {
+          font-weight: bold;
+          padding: 1rem;
+        }
+
+        .example-text {
+          background-color: #f6fef1;
+          padding: 1rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .h5peditor-textual-input-button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    .h5peditor-textual-input-button {
+      background-color: var(--color-primary);
+      border: none;
+      border-radius: 0.25rem;
+      color: var(--color-text-light);
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        background-color: var(--color-primary-90);
+      }
+
+      &::before {
+        font-family: "H5PFontAwesome4", sans-serif;
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+
+      &.get-from-editor::before {
+        content: var(--icon-fontawesome-angles-up);
+      }
+
+      &.set-to-editor::before {
+        content: var(--icon-fontawesome-angles-down);
+      }
+    }
+  }
+}

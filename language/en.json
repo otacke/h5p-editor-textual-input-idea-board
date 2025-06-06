@@ -1,0 +1,13 @@
+{
+  "libraryStrings": {
+    "l10n.helpTextTitleMain": "Important Instructions",
+    "l10n.helpTextTitleExample": "Example",
+    "l10n.helpTextIntroduction": "You can add cards by setting the desired texts here. Cards need to be separated by a blank line.",
+    "l10n.helpTextExample": "Raspberries\n\nStrawberries\n(yummie)\n\nBlueberries",
+    "l10n.warningHeaderText": "Confirm warning notice",
+    "l10n.warningDialogText": "Warning! If you change the task in textual form here and then update the editor with your changes, all existing cards will be removed and only text cards will be added. Previous formatting will be lost.",
+    "l10n.ok": "OK",
+    "l10n.getFromEditor": "Get from editor",
+    "l10n.updateEditor": "Update editor"
+  }
+}

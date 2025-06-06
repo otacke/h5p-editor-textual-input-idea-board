@@ -1,0 +1,44 @@
+{
+  "name": "h5peditor-textual-input-idea-board",
+  "version": "1.0.0",
+  "description": "Editor widget to add a textual editor to H5P.IdeaBoard.",
+  "private": true,
+  "scripts": {
+    "lint": "stylelint './src/**/*.scss' && eslint './src/**/*.js'",
+    "build": "webpack --mode=production",
+    "watch": "webpack --mode=development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otacke/h5p-editor-textual-input-idea-board.git"
+  },
+  "keywords": [
+    "h5p",
+    "editor"
+  ],
+  "author": "Oliver Tacke",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/plugin-transform-destructuring": "^7.27.3",
+    "@babel/preset-env": "^7.27.2",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "eslint-config-snordian-h5p": "github:otacke/eslint-config-snordian-h5p",
+    "mini-css-extract-plugin": "^2.9.2",
+    "regenerator-runtime": "^0.14.1",
+    "sass": "^1.89.1",
+    "sass-loader": "^16.0.5",
+    "stylelint": "^16.20.0",
+    "stylelint-config-recommended": "^16.0.0",
+    "stylelint-config-recommended-scss": "^15.0.1",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "he": "^1.2.0",
+    "showdown": "^2.1.0"
+  },
+  "browserslist": "> 0.5%, last 3 versions, Firefox ESR, not dead"
+}
