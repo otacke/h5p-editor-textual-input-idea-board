@@ -66,6 +66,9 @@ export default class TextualInputIdeaBoard {
     // Use H5PEditor.t('H5PEditor.Boilerplate', 'foo'); to output translatable strings
   }
 
+  /**
+   * Handle parent field ready.
+   */
   handleParentReady() {
     this.input = this.findInputInstance();
     this.editor = this.findEditorInstance();
@@ -73,6 +76,11 @@ export default class TextualInputIdeaBoard {
     this.completeDOM();
   }
 
+  /**
+   * Find input instance in field.
+   * @throws {Error} If input instance is not found.
+   * @returns {H5PEditor.Textarea} Input instance.
+   */
   findInputInstance() {
     const input = H5PEditor.findField(this.field.textualInput?.textarea ?? '', this.fieldInstance);
     if (!input) {
@@ -82,6 +90,11 @@ export default class TextualInputIdeaBoard {
     return input;
   }
 
+  /**
+   * Find editor instance in field.
+   * @throws {Error} If editor instance is not found or does not have required methods.
+   * @returns {H5P.IdeaBoard} Editor instance.
+   */
   findEditorInstance() {
     const editor = H5PEditor.findField(this.field.textualInput?.editor ?? '', this.parent);
     if (!editor) {
@@ -99,6 +112,9 @@ export default class TextualInputIdeaBoard {
     return editor;
   }
 
+  /**
+   * Complete DOM structure for the TextualInput widget.
+   */
   completeDOM() {
     this.input.appendTo(this.dom);
     this.dom.append(this.buildHelpText());
@@ -141,6 +157,10 @@ export default class TextualInputIdeaBoard {
     return wrapper;
   }
 
+  /**
+   * Build button wrapper with buttons to get from editor and set to editor.
+   * @returns {HTMLElement} Button wrapper element.
+   */
   buildButtonWrapper() {
     const buttonWrapper = document.createElement('div');
     buttonWrapper.classList.add('h5peditor-textual-input-button-wrapper');
