@@ -56,7 +56,7 @@ export default class TextualInputIdeaBoard {
       headerText: this.dictionary.get('l10n.warningHeaderText'),
       dialogText: this.dictionary.get('l10n.warningDialogText'),
       confirmText: this.dictionary.get('l10n.ok'),
-      hideCancel: true
+      hideCancel: true,
     });
 
     this.parent.ready(() => {
@@ -136,14 +136,14 @@ export default class TextualInputIdeaBoard {
     // Body with description and example
     const introductionText = markdownToHTML(
       this.dictionary.get('l10n.helpTextIntroduction'),
-      { separateWithBR: true }
+      { separateWithBR: true },
     );
     const description = `<div class="description">${introductionText}</div>`;
 
     const exampleTitle = `<div class="example-title">${this.dictionary.get('l10n.helpTextTitleExample')}</div>`;
     const exampleText = markdownToHTML(
       this.dictionary.get('l10n.helpTextExample'),
-      { separateWithBR: true }
+      { separateWithBR: true },
     );
     const exampleTextDOM = `<div class="example-text">${exampleText}</div>`;
     const example = `<div class="example">${exampleTitle}${exampleTextDOM}</div>`;
@@ -238,7 +238,7 @@ export default class TextualInputIdeaBoard {
     // Get l10n from H5P core if available to keep uniform translations
     let translations = getH5PCoreL10ns([
       { local: 'helpTextTitleMain', h5pCore: 'importantInstructions' },
-      { local: 'helpTextTitleExample', h5pCore: 'example' }
+      { local: 'helpTextTitleExample', h5pCore: 'example' },
     ]);
 
     for (const key in plainTranslations) {
@@ -262,7 +262,7 @@ export default class TextualInputIdeaBoard {
     translations = this.sanitizeTranslations(translations);
 
     this.dictionary.fill(translations, {
-      markdownToHTML: ['helpTextIntroduction']
+      markdownToHTML: ['helpTextIntroduction'],
     });
   }
 
@@ -277,12 +277,14 @@ export default class TextualInputIdeaBoard {
       l10n: {
         helpTextTitleMain: 'Important Instructions',
         helpTextTitleExample: 'Example',
+        // eslint-disable-next-line @stylistic/js/max-len
         helpTextIntroduction: 'You can add cards by setting the desired texts here. Cards need to be separated by a blank line.',
         helpTextExample: 'Raspberries\n\nStrawberries\n(yummie)\n\nBlueberries',
         warningHeaderText: 'Confirm warning notice',
+        // eslint-disable-next-line @stylistic/js/max-len
         warningDialogText: 'Warning! If you change the task in the textual editor all rich text formatting will be removed.',
-        ok: 'OK'
-      }
+        ok: 'OK',
+      },
     }, translations);
   }
 }
